@@ -14,7 +14,7 @@ export default function CardReserva({ reserva }: Props) {
           className="h-full w-full object-cover object-center"
         />
       </div>
-      <h3 className="mt-6 text-sm text-gray-500">
+      <h3 className="mt-6 text-sm text-white">
         <span className="absolute inset-0" />
         Nome da Sala: {reserva.name_room}
       </h3>
