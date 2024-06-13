@@ -24,8 +24,10 @@ export default function LoginPage() {
 
 		})
 		if (request.ok) {
-			const logado = localStorage.setItem("logado", "logado")
-			router.replace("/")
+			if (typeof window !== "undefined") {
+				const logado = localStorage.setItem("logado", "logado")
+				router.replace("/")
+			}
 		}
 	}
 
