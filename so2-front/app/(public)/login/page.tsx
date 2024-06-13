@@ -24,6 +24,7 @@ export default function LoginPage() {
 
 		})
 		if (request.ok) {
+			const logado = localStorage.setItem("logado", "logado")
 			router.replace("/")
 		}
 	}

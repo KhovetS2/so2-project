@@ -4,6 +4,7 @@ export type Reservation =
   {
     idReservation: string,
     name_room: string,
+    localization: string,
     start_hour: string,
     end_hour: string,
     responsible: number,
@@ -16,12 +17,7 @@ export type Reservation =
       {
         user_id: number,
         reservation_id: number,
-        user: {
-          name: string,
-          email: string,
-          password: string,
-          id: number
-        },
+        user: User,
         reservation: {
           idReservation: string,
           name_room: string,
