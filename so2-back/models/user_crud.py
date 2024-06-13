@@ -77,6 +77,7 @@ class Reservations(Base):
     idReservation = Column(String(60))
     foto = Column(Text())
     name_room = Column(String(60))
+    localization = Column(String(200))
     start_hour = Column(String(60))
     end_hour = Column(String(60))
     responsible = Column(ForeignKey(User.id))
@@ -105,6 +106,7 @@ def create_reservations(db: Session, reservation: schemas.ReservationsCreate):
         foto=reservation.foto,
         idReservation=reservation.idReservation,
         name_room=reservation.name_room,
+        localization=reservation.localization,
         start_hour=reservation.start_hour,
         end_hour=reservation.end_hour,
         responsible=reservation.responsible,
@@ -124,6 +126,7 @@ def update_reservations(db: Session, reservation: schemas.ReservationsUpdate):
     if db_reservations:
         db_reservations.idReservation = reservation.idReservation
         db_reservations.name_room = reservation.name_room
+        db_reservations.localization = reservation.localization,
         db_reservations.start_hour = reservation.start_hour
         db_reservations.end_hour = reservation.end_hour
         db_reservations.responsible = reservation.responsible

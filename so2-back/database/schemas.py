@@ -33,8 +33,9 @@ class UserGet(User):
 class ReservationBase(BaseModel):
     idReservation: str
     name_room: str
-    start_hour: str
-    end_hour: str
+    localization: str
+    start_hour: datetime
+    end_hour: datetime
     responsible: int
     use_reason: str
     general_info: str
