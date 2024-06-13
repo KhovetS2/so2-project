@@ -75,7 +75,7 @@ class Reservations(Base):
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     idReservation = Column(String(60))
-    foto = Column(Text())
+    foto = Column(Text(4294000000))
     name_room = Column(String(60))
     localization = Column(String(200))
     start_hour = Column(String(60))

@@ -155,7 +155,7 @@ export default function CadastrarReservaPage() {
             <label className="font-sans font-bold text-lg">Responsável pelo Uso</label>
             <select
               className="ml-4 rounded text-zinc-600 h-8 pl-4"
-              onChange={() => setUser(user)}
+              onChange={(e: any) => setUser(e.target.value)}
             >
               {users.map((user, index) => {
                 return <option key={index} value={user.id}>{user.name}</option>
